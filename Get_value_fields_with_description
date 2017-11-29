@@ -1,0 +1,17 @@
+number s;
+string c;
+string d;
+
+
+d = description;
+d = replace(d, "\n","");
+
+s = indexOf(d, "Planned end: ");
+e = indexOf(d, "Update");
+
+number start = s +13;
+number stop = s + 21;
+
+c = substring(d, start, stop);
+
+#{Planned End}  = parseDate("dd.MM.yyyy", c);
